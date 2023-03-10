@@ -17,8 +17,7 @@ key = config.get('BINANCE', 'KEY')
 client = Client(api, key)
 
 #Crypto List
-symbols = ('BTC', 'ETH', 'DOT', 'SOL', 'MATIC', 'ATOM', 'FTM',
-'SAND', 'BNB', 'XRP','KSM','NEAR','ADA','AVAX','LINK','ALGO','UNI','MANA','XLM','FIL','EGLD','VET','THETA','HNT','AAVE','TRX','DOGE','ENJ')
+symbols = ('BTC', 'ETH', 'DOT', 'SOL', 'MATIC', 'ATOM', 'FTM','SAND', 'BNB', 'XRP','NEAR','ADA','AVAX','LINK','ALGO','UNI','MANA','FIL','EGLD','TRX','ENJ')
 
 #Parametros para las señales 1 dia
 run_interval_seconds = 43200
@@ -158,9 +157,8 @@ while True:
                                                 dict_1d_closes,dict_1week,dict_1week_STOCHRSI_k,dict_1week_STOCHRSI_d)
     print('-------------------------------------------------------------------')
 
-    #print('Trend trades:')
-    #trend_trades.trend_trade_detector(dict_1d, dict_1d_MFI, dict_1d_STOCHRSI_k, dict_1d_STOCHRSI_d, dict_1D_50MA,dict_1D_100MA, dict_1D_200MA,
-    #                               dict_1d_closes,dict_3d)
+    print('Excellent trades (sin semanal):')
+    trend_trades.trend_trade_detector(dict_1d, dict_1d_MFI, dict_1d_STOCHRSI_k, dict_1d_STOCHRSI_d,dict_1D_50MA, dict_1D_100MA, dict_1D_200MA,dict_1d_closes)
 
     print('-------------------------------------------------------------------')
     time.sleep(run_interval_seconds)
