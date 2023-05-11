@@ -2,7 +2,7 @@ import requests
 import emoji
 
 TOKEN = "5316537394:AAH7dsxa4SFQlW4_U1oNb8lTdGZ_q2ZfDaU"
-chat_id = "-1001685057073"
+chat_id = "-1934385975"
 
 def send_telegram_message(df,type):
     msg = type + emoji.emojize(":red_exclamation_mark:")
