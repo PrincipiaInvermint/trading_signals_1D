@@ -1,5 +1,5 @@
 import pandas as pd
-from email_functions import ricci_group_1_emails, telegram_sender, ricci_group_2_emails, principia_1_emails, principia_2_emails, telegram_sender_quant
+from email_functions import telegram_sender, telegram_sender_quant, telegram_sender_principia, telegram_sender_bono6m
 
 #Riesgo-beneficio, TPs
 rb = 2
@@ -42,6 +42,8 @@ def df_incredible_calc(list):
         #principia_2_emails.principia_sender_2(df, 'Incredible Trades 1D')
         telegram_sender.send_telegram_message(df,'Incredible Trades 1D')
         telegram_sender_quant.send_telegram_message(df,'Incredible Trades 1D')
+        telegram_sender_principia.send_telegram_message(df,'Incredible Trades 1D')
+        telegram_sender_bono6m.send_telegram_message(df,'Incredible Trades 1D')
 
     else:
         print('no cryptos were found')
