@@ -11,7 +11,7 @@ def send_telegram_message(df,type):
     for i in range(len(df)):
         msg = msg + '\nCrypto: ' + (df['Crypto'].iloc[i]) + '/ USDT' + '\n Entry Price: ' + str((df['Precio_Entrada'].iloc[i])) + '\n TP1: ' + str(
             (df['TP1'].iloc[i])) + '\n TP2: ' + str((df['TP2'].iloc[i])) + '\n TP3: ' + str((df['TP3'].iloc[i])) + '\n SL: ' + str(
-            (df['Precio_SL'].iloc[i])) + '\n Rating: ' + (df['Rating'].iloc[i]) + '\n' + msg2 + msg3 + '\n ---------------------'
+            (df['Precio_SL'].iloc[i])) + '\n' + msg2 + msg3 + '\n ---------------------'
 
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={msg}"
     r = requests.get(url)
