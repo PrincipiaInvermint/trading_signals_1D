@@ -18,7 +18,7 @@ client = Client(api, key)
 
 #Crypto List
 symbols = ('BTC','ETH','BNB','ADA','SOL','MATIC','DOT','TRX','AVAX','UNI','ATOM','LTC','LINK','XMR','ALGO','NEAR','AAVE',
-            'FET','OCEAN','EGLD','FIL','SAND','MANA','FTM')
+            'FET','OCEAN','EGLD','FIL','SAND','MANA','FTM','DOGE')
 
 #Parametros para las señales 1 dia
 run_interval_seconds = 43200
